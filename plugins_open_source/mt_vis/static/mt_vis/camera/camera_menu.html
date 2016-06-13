@@ -1,0 +1,29 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend translate="VIS.VIEWS"></legend>
+        <div class="form-group">
+            <div class="col-sm-12 btn-group-vertical" role="group" aria-label="..." ng-click="cameraMenu.getCameraPos()">
+                <button class="btn btn-primary" ng-repeat="view in cameraMenu.views" type="button" ng-click="cameraMenu.setView(view)" translate>{{view.name}}</button>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend translate="">VIS.BACKGROUND</legend>
+        <div class="form-group">
+            <label class="col-sm-8 control-label" for="backgroundGradientTopColor" translate >VIS.TOP_COLOR</label>
+            <div class="col-sm-4">
+                <button class="btn btn-info" id="backgroundGradientTopColor" type="button" mt-color-picker="cameraMenu.topColor">
+                    <span class="glyphicon glyphicon-tint"></span>
+                </button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-8 control-label" for="backgroundGradientBottomColor" translate >VIS.BOTTOM_COLOR</label>
+            <div class="col-sm-4">
+                <button class="btn btn-info" id="backgroundGradientBottomColor" type="button" mt-color-picker="cameraMenu.bottomColor">
+                    <span class="glyphicon glyphicon-tint"></span>
+                </button>
+            </div>
+        </div>
+    </fieldset>
+</form>

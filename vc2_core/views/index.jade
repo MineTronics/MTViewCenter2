@@ -1,0 +1,26 @@
+doctype html
+html
+    head(lang="en")
+        title MT-VC2
+        meta(http-equiv="content-type", content="text/html, charset=UTF-8")
+        meta(name="description", content="Visualisation tool for mining")
+        meta(name="keywords", content="")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+        link(href="static/css/mtviewcenter2.css", rel="stylesheet")
+    body
+        #main-container(ng-controller="mtTabCtrl as mtTabs", ng-class="{'container': !mtTabs.setFullscreen, 'container-fluid': mtTabs.setFullscreen}").container
+            div.welcome-screen(hide-after-bootstrap then-show=".mt-tabs")
+                img(src="static/img/mt/MineTronicsLogo1024.jpg").mt-logo
+                div.jumbotron
+                    h3 Application is loading, please wait...
+                    h3
+                        span.ng-class: isError(ng-cloak ng-if="expected > 0") Loading plugins...  ({{loaded}} / {{expected}})
+            tabset.mt-tabs.row(i18n-button, style="display: none")
+                div(vcheader)
+                    div(ng-repeat="(pluginName, header) in mtTabs.header", class="{{header.class}}", ng-show="{{header.show}}", compile="header.content")
+                tab(ng-repeat="(plugin, tab) in mtTabs.tabs", heading="{{tab.title | translate}}", active="tab.active", disabled="tab.disabled", select="mtTabs.onTabSelect()")
+                    div(compile="tab.content")
+                div(vcfooter)
+                    div(ng-repeat="(pluginName, footer) in mtTabs.footer", class="{{footer.class}}", ng-show="{{footer.show}}", compile="footer.content")
+            footer.mtfooter &copy; Minetronics &amp; MT-Silesia 2016
+        script(type="text/javascript", data-main="static/main", src="static/require.js")

@@ -1,0 +1,12 @@
+{
+    "AUTH": {
+        "TITLE": "Anmelden",
+        "DESC": "Managed Authentifizierung.",
+        "SUCCESS": "Erfolgreich angemeldet. Plugins werden heruntergeladen.",
+        "FAIL": "Fehler bei Anmeldung.",
+        "PLACEHOLDER": {
+            "USERNAME": "Benutzername, z.B. mine",
+            "PASSWORD": "Passwort, z.B. tronics"
+        }
+    }
+}

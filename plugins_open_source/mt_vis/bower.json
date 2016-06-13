@@ -1,0 +1,5 @@
+{
+    "dependencies": {
+        "scenejs": "https://github.com/xeolabs/scenejs.git#472b7ac14874f11708b29d93ce4616636cf99996"
+    }
+}

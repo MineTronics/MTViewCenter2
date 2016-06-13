@@ -1,0 +1,483 @@
+/* 
+    Created on : Jul 21, 2014, 1:16:31 PM
+    Author     : jkochman
+*/
+
+body {
+	background-image: url("../img/mt/htmlbg.gif");
+}
+
+#main-container {
+	background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.container, 
+.navbar-static-top .container, 
+.navbar-fixed-top .container, 
+.navbar-fixed-bottom .container {
+    width: 1024px;
+}
+
+/*Minetronics logo visible during app startup*/
+.welcome-screen img {
+	border-radius: 10px;
+	position: relative;
+	left: -15px;
+}
+/*Elements annotated with ng-cloak are hidden until angular application is bootstrapped
+so no unproccessed templates are visible*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+/*Expand bootstrap dropdown on hover, by default is onclick*/
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;    
+}
+
+/*Bootstrap sets it to 1px which doesn't look nice if vcheader container is empty*/
+div[vcheader]>div {
+	min-height: 0px;
+}
+
+/*Workaround to make side columns inside vcfooter having the same height
+Otherwise each column takes as much height as it needs and they look uneven*/
+div[vcfooter] > div {
+	/*background-color: #91daff;*/
+	min-height: 86px;
+}
+
+.node-label {
+    z-index: 100;
+    position : absolute;
+    font-family: Helvetica;
+    font-size: 14px;
+    padding: 5px;
+    margin: 0px;
+    border: 1px solid #000055;
+    color: black;
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #444444;
+    left : 0;
+    top: 0;
+    height: auto;
+    width: auto;
+	min-width: 100px;
+}
+
+/*Move label on top so it's not obstructed by others*/
+.node-label:hover {
+    z-index: 102;
+}
+
+/*A simple solution for overlapping labels - periodically in sequence each label
+will be on top. It has lower 'priority' than .node-label:hover*/
+.node-label-top {
+	z-index: 101;
+}
+
+/*Expand label on hover by showing details */
+.node-label:hover ul, .node-label.hovered ul {
+    display: block;
+}
+
+/*Label's details are not displayed by default*/
+.node-label ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap;
+    display: none;
+}
+
+.node-label h4 {
+    float: right;
+    padding: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/*For canvas 'fullscreen' look, this might not be required anymore with SceneJS@4.0.0*/
+#canvas-container {
+	overflow: hidden;
+    position: relative;
+	padding: 0px;
+}
+
+#main_canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/*Left and right side menus are hidden and slide in when clicked on arrow button*/
+.vis-side-menu {
+	bottom: 0;
+	position: absolute;
+	top: 0;
+	z-index: 200;
+	width: 300px;
+}
+
+.vis-side-menu.right {
+	right: 0;
+}
+
+.vis-side-menu.left {
+	left: 0;
+}
+
+.vis-side-menu .arrow {
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.vis-side-menu.right .arrow {
+	left: 0px;
+}
+
+.vis-side-menu.left .arrow {
+	left: 260px;
+}
+
+
+.vis-side-menu .menu-body {
+	width: 260px;
+	overflow-y: auto;
+	background: none repeat scroll 0 0 #91daff;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	padding: 5px;
+	margin-bottom: 0px;
+}
+
+.vis-side-menu.right .menu-body {
+	right: 0;
+	left: 40px;
+}
+
+.vis-side-menu.left .menu-body {
+	right: 40px;
+	left: 0px;
+}
+
+.edit-menu .checkbox-inline {
+	margin-top: 0px;
+	border-bottom: 1px solid lightgray;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.edit-menu .form-group:last-child {
+	margin-bottom: 0px;
+}
+
+.edit-menu h4 {
+	min-height: 42px;
+}
+
+.mtfooter {
+    background: none repeat scroll;
+    border-radius: 6px;
+    background-size: 132px 1024px;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/*mine-status component needs to be revisited*/
+.mine-status {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/*Bottom message-box animation*/
+.message-box {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	height: 66px;
+}
+
+.message-box ul {
+	list-style-type: none;
+	padding: 0px;
+	position: absolute;
+	width: 98%;
+	background-color: #eee;
+}
+
+.message-box button.close {
+	width: 2%;
+}
+
+.message-box ul li {
+	 line-height:22px;
+	list-style:none;
+	box-sizing:border-box;
+}
+
+.message-box ul li.ng-move,
+.message-box ul li.ng-enter,
+.message-box ul li.ng-leave {
+  -webkit-transition:all linear 0.3s;
+  transition:all linear 0.3s;
+}
+
+.message-box ul li.ng-leave.ng-leave-active,
+.message-box ul li.ng-move,
+.message-box ul li.ng-enter {
+  opacity: 0;
+  max-height: 0px;
+}
+
+.message-box ul li.ng-leave,
+.message-box ul li.ng-move.ng-move-active,
+.message-box ul li.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height: 22px;
+}
+
+.message-box ul .alert {
+	margin-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	width: 100%;
+}
+
+#labels-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#labels-container svg {
+	width: 100%;
+	height: 100%;
+}
+
+.mapinfo-form {
+	margin: 20px;
+	background: inherit;
+}
+
+.mapinfo-form label.button-label {
+	margin-bottom: 0px;
+	padding-top: 7px;
+	text-align: right;
+	margin-left: 10px;
+}
+
+/*Color picker rectangular to show currently picked color*/
+.color-indicator {
+	float: left;
+    width: 21%;
+    height: 96px;
+    background-image: none;
+}
+
+.i18n>a.dropdown-toggle {
+	border: none;
+}
+
+.i18n > div.dropdown-menu {
+	border-radius: 4px;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.i18n > .list-group img {
+	position: absolute;
+	right: 15px;
+	margin-top: -14px;
+	top: 50%;
+}
+
+.mt-color-picker-front.ui-dialog {
+	z-index: 1500;
+}
+
+.mt-color-indicator {
+	height: 100px;
+	width: 100px;
+	border-radius: 5px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px 1px 1px 1px;
+}
+
+.mt-color-input {
+	margin-bottom: 33px;
+	padding-top: 33px;
+}
+
+.mt-color-set {
+	padding: 0.5em;
+}
+
+.mt-color-set > span {
+	border-radius: 5px;
+	border: 1px solid black;
+	width: 22px;
+	height: 22px;
+	margin: 6px;
+	display: inline-block;
+}
+
+.margin-top-0 {
+	margin-top: 0px;
+}
+
+.gantt-current-date-line {
+	border: 1px solid red;
+	z-index: 100;
+}
+
+.gantt-task-bounds.task-delay{
+    z-index: -1;
+	background-color: #f0ad4e;
+	border-radius: 1px;
+}
+
+.gantt-task-bounds-in.task-delay {
+    border-color: #2E4F2E;
+}
+
+.gantt-task-bounds-out.task-delay {
+    border-color: #2E4F2E;
+}
+
+.gantt-task-background {
+	border: 1px solid;
+}
+
+.mt-progress-bar {
+	height: 10px;
+	opacity: 0.5;
+}
+
+.mt-gantt-row {
+	font-size: 10px;
+	border-bottom: 1px solid lightgray;
+}
+
+.mt-task-content {
+	display: inline-block;
+}
+
+.gantt-side-content.mt-gantt-side-content .gantt-row-label-header {
+	text-align: center;
+	position: initial;
+}
+
+.gantt-side-content.mt-gantt-side-content .gantt-label-text {
+	padding: 0px;
+}
+
+.gantt-resizer {
+	right: -8px;
+}
+
+.gantt-row-even > .gantt-row-background {
+	background-color: white;
+}
+
+.lrg-margin {
+	margin: 20px;
+}
+
+.line-separator {
+	border-bottom: 2px solid lightgray;
+}
+
+.active.badge {
+	color: #337ab7;
+	background-color: #fff;
+}
+
+.no-border {
+	border: none;
+}
+
+.list-group-item-compact {
+	padding: 1px 0px;
+}
+
+.form-horizontal.compact .form-group {
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+
+.form-horizontal.compact p.form-control-static {
+	min-height: 20px;
+}
+
+.font-bg {
+	font-size: 16px;
+}
+
+.font-lg {
+	font-size: 18px;
+}
+
+.side-margin-sm {
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.mt-timeframe {
+	opacity: 0.3;
+}
+
+.gantt-tree-body .gantt-row-label a.gantt-tree-handle-button {
+	display: none;
+}
+
+.form-control.width-sm, .width-sm {
+	width: 100px;
+}
+
+.lhd-gantt-task {
+	min-width: 22px;
+}
+
+.lhd-gantt .gantt-task:hover {
+	min-width: 100px;
+	z-index: 1500;
+}
+
+.lhd-gantt-task .gantt-task-background {
+	background-color: inherit;
+}
+
+/*To center gant-task-content vertically */
+.lhd-gantt-task .gantt-task-content > span > span {
+	line-height: 1.5em;
+}
+
+.lhd-gantt-task .gantt-task-content > span {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.lhd-gantt .gantt-table-column {
+	min-width: 160px;
+}
+
+.lhd-gantt-last-shift-header {
+	position: relative; 
+	top: 4em;
+}

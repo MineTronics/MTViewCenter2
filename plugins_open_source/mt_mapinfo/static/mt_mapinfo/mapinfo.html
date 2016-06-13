@@ -1,0 +1,137 @@
+<div class="mapinfo-form">
+    <!--MTMapCenter map controls-->
+    <form class="form-horizontal" role="form">
+        <h4 style="border-bottom: 2px solid lightgray;">Database maps</h4>
+
+        <!--Error box-->
+        <alert ng-show="mapCenter.error" type="danger" close="mapCenter.error = undefined">
+            {{ mapCenter.error.msg | translate:mapCenter.error }}
+        </alert>
+
+        <!--Available maps table-->
+        <table ng-show="mapCenter.maps.length" class="table table-striped table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th translate>MAP.NAME</th>
+                    <th translate>MAP.UPLOADED</th>
+                    <th translate>OPTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="dbMap in mapCenter.maps track by dbMap.id">
+                    <td>{{::dbMap.name}}</td>
+                    <td>{{::dbMap.ts}}</td>
+                    <td>
+                        <button class="btn btn-info" type="submit" ng-click="getMineMap(dbMap.id)" translate>LOAD</button>
+                        <div class="radio" style="display: inline-block; margin-left: 10px;">
+                            <label>
+                                <input type="radio" ng-model="map.default_map_id" value="{{::dbMap.id}}">
+                                <span translate>MAP.DEFAULT</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Refresh database maps list-->
+        <div class="form-group">
+            <div class="col-sm-12 text-center">
+                <button class="btn btn-info" ng-click="getMineMapNames()" translate>{{mapCenter.refreshMapListText}}</button>
+            </div>
+        </div>
+    </form>
+
+    <!--Uploading maps to database-->
+    <form role="form" class="form-horizontal">
+        <h4 style="border-bottom: 2px solid lightgray;" translate>MAP.UPLOAD</h4>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <input type="file" fileread="mapCenter.mapUpload.data" on-file-reader-error="error = { msg: 'MAP.ERROR.LOADING' }">
+            </div>
+
+            <!--Upload status alert-->
+            <div class="col-sm-12">
+                <alert ng-show="mapCenter.mapUpload.state.msg" type="{{mapCenter.mapUpload.state.color}}" close="mapCenter.mapUpload.state.msg = undefined">
+                    {{ mapCenter.mapUpload.state.msg | translate:mapCenter.mapUpload.state }}
+                </alert>
+            </div>
+        </div>
+    </form>
+
+    <!--Loading and drawing maps from local file-->
+    <form role="form" class="form-horizontal">
+        <h4 style="border-bottom: 2px solid lightgray;" translate>MAP.LOAD_FROM_FILE</h4>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <input type="file" fileread="loadFile.data" on-file-read-event="handleLoadFileEvent(event, type)">
+            </div>
+        </div>
+
+        <!--Load status alert-->
+        <div class="col-sm-12">
+            <alert ng-show="loadFile.state.msg" type="{{loadFile.state.type}}" close="loadFile.state.msg = undefined">
+                {{ loadFile.state.msg | translate }}
+            </alert>
+        </div>
+
+        <!--File specs-->
+        <div class="form-group" ng-show="loadFile.data.size">
+            <label class="col-sm-2 control-label" translate>MAP.FILE.SIZE </label>
+            <label class="col-sm-3 control-label">{{loadFile.parsedSize}}</label>
+        </div>
+        <div class="form-group" ng-show="loadFile.data.content">
+            <label class="col-sm-2 control-label" translate>MAP.FILE.LINES </label>
+            <label class="col-sm-3 control-label">{{loadFile.lines}}</label>
+        </div>
+    </form>
+
+    <!--Map layers controls-->
+    <form class="form-horizontal" role="form">
+        <h4 translate style="border-bottom: 2px solid lightgray;">MAP.LAYERS</h4>
+        <div class="form-group" ng-repeat="(i, layer) in mapModel.layers">
+            <div class="col-sm-6">
+                <input type="text" ng-model="layer.name" class="form-control">
+            </div>
+            <div class="col-sm-6 text-center">
+                <div role="group" class="btn-group ">
+                    <button type="button" class="btn" ng-class="{'btn-info': layer.visibility, 'btn-default': !layer.visibility}" ng-click="layer.visibility = !layer.visibility">
+                        <span aria-hidden="true" class="glyphicon" ng-class="{'glyphicon-eye-open': layer.visibility, 'glyphicon-eye-close': !layer.visibility}"> </span>
+                        <span translate>{{layer.visibility ? 'MAP.LAYER.VISIBLE' : 'MAP.LAYER.HIDDEN'}}</span>
+                    </button>
+                    <button type="button" class="btn btn-info" mt-color-picker rgb-color="layer.color" callback="changeColor(layer)">
+                        <span aria-hidden="true" class="glyphicon glyphicon-tint"> </span> <span translate>COLOR</span>
+                    </button>
+                    <button class="btn btn-success" ng-class="{'btn-danger': layer.isIgnored, 'btn-success': !layer.isIgnored}" type="button" ng-click="setLayerIgnore(layer)">
+                        <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"> </span>
+                        <span translate>{{layer.isIgnored ? 'MAP.LAYER.IGNORE' : 'MAP.LAYER.DRAW'}}</span>
+                    </button>
+                    <button ng-if="map.allow_extrapolating" class="btn btn-info" type="button" ng-click="extrapolateToGrid(layer)">
+                        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"> </span>
+                        <span translate="" class="ng-scope ng-binding">Extrapolate</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <div class="col-sm-12">
+                <button class="btn btn-info" ng-click="drawMap()" translate>MAP.DRAW_MAP</button>
+            </div>
+        </div>
+        <div class="form-group text-center" ng-if="map.allow_map_exporting_as_json">
+            <div class="col-sm-offset-3 col-sm-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="File name" ng-model="export.filename">
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="button" ng-click="exportAsJson()" translate>Export to JSON</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="checkbox col-sm-12">
+                <textarea class="form-control" rows="5" ng-model="drawingFeedback"></textarea>
+            </div>
+        </div>
+    </form>
+</div>

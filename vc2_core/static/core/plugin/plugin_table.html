@@ -1,0 +1,30 @@
+<table class="table table-bordered" ng-controller="mtPluginTabCtrl as pluginTable">
+	<thead>
+		<tr>
+			<th translate>ENABLED</th>
+			<th translate>PLUGIN_NAME</th>
+			<th translate>DESCR</th>
+			<th translate>VER</th>
+			<!--<th translate>AUTHOR</th>-->
+			<!--<th translate>SIGNED</th>-->
+			<!--<th translate>LAST_UPD</th>-->
+			<!--<th translate>UPDATES</th>-->
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="plugin in pluginTable.plugins">
+			<td>
+				<input type="checkbox" ng-model="plugin.enabled" ng-click="pluginTable.toggle(plugin)" id="{{plugin.title + '_plugin_toggle'}}">
+			</td>
+			<td>
+				<label for="{{::plugin.title + '_plugin_toggle'}}" translate>{{::plugin.title}}</label>
+			</td>
+			<td style="max-width:350px">
+				<label for="{{::plugin.title + '_plugin_toggle'}}" translate>{{plugin.description}}</label>
+			</td>
+			<td>
+				<label for="{{::plugin.title + '_plugin_toggle'}}"> {{::plugin.version}}</label>
+			</td>
+		</tr>
+	</tbody>
+</table>

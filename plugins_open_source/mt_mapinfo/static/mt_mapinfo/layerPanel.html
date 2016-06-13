@@ -1,0 +1,28 @@
+<div class="text-left">
+    <button type="button" class="btn btn-info" ng-click="setLayersVisibility(true)">
+        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+        <span translate>MAP.LAYER.SHOW_ALL</span>
+    </button>
+    <button class="btn btn-info pull-right" type="button" ng-click="setLayersVisibility(false)">
+        <span aria-hidden="true" class="glyphicon glyphicon-eye-close"></span>
+        <span translate>MAP.LAYER.HIDE_ALL</span>
+    </button>
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item list-group-item-compact no-border" ng-repeat="(i, layer) in mapModel.layers | filterObjectByKeyVal:'isIgnored':false">
+        <div class="input-group input-group-sm">
+            <span class="input-group-btn">
+                <button class="btn" ng-class="{'btn-info': layer.visibility}" type="button" ng-click="changeVisibility(layer)">
+                    <span class="glyphicon" ng-class="{'glyphicon-eye-open': layer.visibility, 'glyphicon-eye-close': !layer.visibility}"></span>
+                </button>
+            </span>
+            <input type="text" class="form-control" ng-model="layer.name">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-info" mt-color-picker rgb-color="layer.color" callback="changeColor(layer)">
+                    <span class="glyphicon glyphicon-tint"></span>
+                </button>
+            </span>
+        </div>
+    </li>
+</ul>

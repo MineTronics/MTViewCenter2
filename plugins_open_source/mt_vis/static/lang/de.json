@@ -1,0 +1,19 @@
+{
+    "VIS": {
+        "TITLE": "Visualisierung",
+        "DESC": "Visualisierungsmodul. Erlaubt dem Benutzer eine 3D Ansicht auf die Mine inklusive Darstellung der Zusatzdaten wie Geräte, Temperatur oder Feuchtigkeit",
+        "VIEWS": "Ansichten",
+        "CAM": "Kamera",
+        "TOP_COLOR": "Farbe Oben",
+        "BACKGROUND": "Hintergrund",
+        "BOTTOM_COLOR": "Farbe Unten",
+        "AUTOSTART": "Visualisierungs Plugin automatisch starten",
+        "CAMERA": {
+            "DEFAULT": "Standard",
+            "TOP": "Oben",
+            "N_S": "Nord-Süd",
+            "W_E": "West-Ost",
+            "ANGLE": "Winkel"
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "MAP": {
+        "TITLE": "Karte",
+        "DESC": "Lädt die standard Karte und stellt Diese in der Visualisierung dar. Benötigt mt/vis2.",
+        "UPLOADED": "zur Datenbank hinzugefügt",
+        "NAME": "Kartenname",
+        "UPLOAD": "Karte an Datenbank gesendet",
+        "DEFAULT": "vorgegebene Karte",
+        "NONE": "Es wurde noch keine Karte geladen",
+        "LOAD_FROM_FILE": "Karte aus Datei laden",
+        "REFRESH_LIST": "Aktualisiere Liste der verfügbaren Karten",
+        "REFRESH_LIST_IN_PROGRESS": "Aktualisiere Liste...",
+        "CONFIG_GROUP": "Karten Plugin",
+        "CONFIG_DEFAULT_MAP": "ID der standard Karte beim Plugin start",
+        "DRAWING_PRIMITIVE": "Kartenelemente als simple Objekte darstellen",
+        "FALLBACK_MAP": "Ort der standard Karte auf dem MTCenter Server",
+        "AUTOSTART": "Karten Plugin automatisch starten",
+        "LAYERS": "Karten Layer",
+        "LAYER": {
+            "HEADER": "Layers",
+            "VISIBLE": "Sichtbar",
+            "NAME": "Name",
+            "HIDE_INFO": "Deaktivieren um Layer zu verstecken",
+            "PRIORITY": "Priorität",
+            "COLOR": "Farbe",
+            "SHOW_ALL": "Alles anzeigen",
+            "HIDE_ALL": "Alle verstecken",
+            "HIDDEN": "Verstaeckt",
+            "IGNORE": "Ignorieren",
+            "DRAW": "Zeichnen"
+        },
+        "ERROR": {
+            "NULL": "Kein Karteninformation dargestellt.",
+            "LOADING": "Kann Karteninformationen {{details}} nicht laden.",
+            "PARSING": "Datei {{filename}} konnte nicht analysiert werden: {{details}}.",
+            "DRAWING": "Karte konnte nicht dargestellt werden: {{details}}.",
+            "MAPCENTER": "Es konnten keine Daten vom MTMapCenter empfangen werden: {{details}}",
+            "SEND": "Es konnten keine Daten an MTMapCenter gesendet werden: {{details}}"
+        },
+        "SENDING": "Sending map data...",
+        "SEND_SUCC": "Map has been successfully sent to the database.",
+        "PARSING": "Analysiere Karteninformationen ...",
+        "PARSING_DONE": "Analyse beendet",
+        "DRAW_MAP": "Zeichne Karte",
+        "DRAWING": "Zeichne Karte ...",
+        "REMOVING": "Entferne zuvor geladene Kartendaten ...",
+        "IGNORE_ALL_LAYERS": "Ignoriere alle Ebenen",
+        "FILE": {
+            "READING": "Lese Datei...",
+            "LOADED": "Datei geladen",
+            "SIZE": "Dateigrösse",
+            "LINES": "Zeilennummern",
+            "ERROR": "Kann die Datei nicht lesen"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "CONFIG": {
+        "TITLE": "Konfiguration",
+        "DESC": "Erlaubt das Speichern von Konfigurationsparametern im Browser und/oder auf dem entfernten Server.",
+        "ENTRY": "Eintrag",
+        "VALUE": "Wert",
+        "RESET": "Zurücksetzen",
+        "RESET_ALL": "Alles Zurücksetzen",
+        "MAIN_GROUP": "Allgemein",
+        "AUTOSTART_GROUP": "Automatischer start der Plugins",
+        "DEBUG_GROUP": "Fehlersuche",
+        "MTCENTER_URL": "URL Adresse des MTCenter Server"
+    }
+}

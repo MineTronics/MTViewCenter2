@@ -1,0 +1,8 @@
+<button ng-show="menu.items.length" class="arrow btn btn-info" ng-click="toggleArrow()">
+    <span class="glyphicon" ng-class="arrowIcon"></span>
+</button>
+<div accordion ng-show="menu.items.length" close-others="menu.closeOthers" class="menu-body">
+    <accordion-group is-open="item.isOpen" is-disabled="item.isDisabled" ng-repeat="item in menu.items" heading="{{item.heading | translate}}">
+        <div compile="item.body"/>
+    </accordion-group>
+</div>

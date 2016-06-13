@@ -1,0 +1,54 @@
+{
+    "ENABLED": "Enabled",
+    "PLUGIN_NAME": "Plugin name",
+    "DESCR": "Description",
+    "VER": "Version",
+    "AUTHOR": "Author",
+    "SIGNED": "Signed",
+    "LAST_UPD": "Last update",
+    "UPDATES": "Updates",
+    "PLUGINS": "Plugins",
+    "RESET": "Reset",
+    "SAVE": "Save",
+    "APPLY": "Apply",
+    "COLOR": "Color",
+    "OPTIONS": "Options",
+    "LOAD": "Load",
+    "CLOSE": "Close",
+    "SEARCH": "Search",
+    "DATE": "Date",
+    "LANG": {
+        "BUTTON": "Language",
+        "EN": "English",
+        "PL": "Polish",
+        "SI": "Slovenian",
+        "DE": "German"
+    },
+    "COLOR_PICKER": {
+        "TITLE": "Color picker"
+    },
+    "DOWNLOAD": "Download",
+    "DATATABLES": {
+        "emptyTable": "No data available in table",
+        "info": "Showing _START_ to _END_ of _TOTAL_ entries",
+        "infoEmpty": "Showing 0 to 0 of 0 entries",
+        "infoFiltered": "(filtered from _MAX_ total entries)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Show _MENU_ entries",
+        "loadingRecords": "Loading...",
+        "processing": "Processing...",
+        "search": "Search:",
+        "zeroRecords": "No matching records found",
+        "paginate": {
+            "first": "First",
+            "last": "Last",
+            "next": "Next",
+            "previous": "Previous"
+        },
+        "aria": {
+            "sortAscending": ": activate to sort column ascending",
+            "sortDescending": ": activate to sort column descending"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "CONFIG": {
+        "TITLE": "Konfiguracija",
+        "DESC": "Omogoèa dostop in shranjevanje configuracijskih parametrov v brskalniku in/ali oddaljenem stržniku.",
+        "ENTRY": "Vnos",
+        "VALUE": "Vrednost",
+        "RESET": "Ponastavi",
+        "RESET_ALL": "Ponastavite vse",
+        "MAIN_GROUP": "Glavni",
+        "AUTOSTART_GROUP": "Avtomatski začetek čep",
+        "DEBUG_GROUP": "Odpravljanje težav",
+        "MTCENTER_URL": "URL naslov MTCenter strežnika"
+    }
+}

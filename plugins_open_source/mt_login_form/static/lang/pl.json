@@ -1,0 +1,12 @@
+{
+    "AUTH": {
+        "TITLE": "Login",
+        "DESC": "Zarządza formularzem do autentykacji.",
+        "SUCCESS": "Zalogowano pomyślnie. Dostępne wtyczki są pobierane.",
+        "FAIL": "Nie udało się zalogować.",
+        "PLACEHOLDER": {
+            "USERNAME": "Nazwa użytkownika, np. mine",
+            "PASSWORD": "Hasło, np. tronics"
+        }
+    }
+}

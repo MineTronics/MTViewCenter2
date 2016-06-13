@@ -1,0 +1,54 @@
+{
+    "ENABLED": "Włączony",
+    "PLUGIN_NAME": "Nazwa wtyczki",
+    "DESCR": "Opis",
+    "VER": "Wersja",
+    "AUTHOR": "Autor",
+    "SIGNED": "Podpisany",
+    "LAST_UPD": "Ostatnia aktualizacja",
+    "UPDATES": "Aktualizacja",
+    "PLUGINS": "Wtyczki",
+    "RESET": "Przywróć",
+    "SAVE": "Zapisz",
+    "APPLY": "Zastosuj",
+    "COLOR": "Kolor",
+    "OPTIONS": "Opcje",
+    "LOAD": "Wczytaj",
+    "CLOSE": "Zamknij",
+    "SEARCH": "Szukaj",
+    "DATE": "Data",
+    "LANG": {
+        "BUTTON": "Język",
+        "EN": "Angielski",
+        "PL": "Polski",
+        "SI": "Słoweński",
+        "DE": "Niemiecki"
+    },
+    "DOWNLOAD": "Pobierz",
+    "COLOR_PICKER": {
+        "TITLE": "Paleta kolorów"
+    },
+    "DATATABLES": {
+        "emptyTable": "Brak danych do wyświetlenia",
+        "info": "Wyświelanie od _START_ do _END_ z możliwych _TOTAL_ pozycji",
+        "infoEmpty": "Wyświelanie od 0 do 0 z możliwych 0 pozycji",
+        "infoFiltered": "(odfiltrowano z możliwych _MAX_ pozyci)",
+        "infoPostFix": "",
+        "thousands": "",
+        "lengthMenu": "Wyświetl _MENU_ pozycji",
+        "loadingRecords": "Wczytywanie...",
+        "processing": "Przetwarzanie...",
+        "search": "Szukaj:",
+        "zeroRecords": "Nie znaleziono pasujących pozycji",
+        "paginate": {
+            "first": "Pierwsza",
+            "last": "Ostatnia",
+            "next": "Następna",
+            "previous": "Poprzednia"
+        },
+        "aria": {
+            "sortAscending": ": posortuj kolumny rosnąco",
+            "sortDescending": ": posortuj kolumny malejąco"
+        }
+    }
+}

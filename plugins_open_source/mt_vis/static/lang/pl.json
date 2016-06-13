@@ -1,0 +1,16 @@
+{
+    "VIS": {
+        "TITLE": "Wizualizacja",
+        "DESC": "Wtyczka odpowiedzialna za wizualizację mapy i urządzeń oraz dodatkowych danych jak wilgotność, czy temperatura.",
+        "VIEWS": "Widoki",
+        "CAM": "Kamera",
+        "AUTOSTART": "Automatyczny start wtyczki wizualizacji",
+        "CAMERA": {
+            "DEFAULT": "Domyślny",
+            "TOP": "Z góry",
+            "N_S": "Północ-południe",
+            "W_E": "Zachód-wschód",
+            "ANGLE": "Kąt"
+        }
+    }
+}

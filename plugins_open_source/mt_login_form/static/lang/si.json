@@ -1,0 +1,12 @@
+{
+    "AUTH": {
+        "TITLE": "Prijava",
+        "DESC": "Upravljanje z avtentikacijskim obrazcem.",
+        "SUCCESS": "Uspešno ste se prijavili. Vtièniki se nalagajo.",
+        "FAIL": "Napaèna prijava!",
+        "PLACEHOLDER": {
+            "USERNAME": "Uporabnik, npr. mine",
+            "PASSWORD": "Geslo, npr. tronics"
+        }
+    }
+}

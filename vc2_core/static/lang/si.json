@@ -1,0 +1,54 @@
+{
+    "ENABLED": "Omogoèen",
+    "PLUGIN_NAME": "Ime Vtiènika",
+    "DESCR": "Opis",
+    "VER": "Verzije",
+    "AUTHOR": "Autor",
+    "SIGNED": "Podpisano",
+    "LAST_UPD": "Zadnja posodobitev",
+    "UPDATES": "Posodobitve",
+    "PLUGINS": "Vtièniki",
+    "RESET": "Reset",
+    "SAVE": "Shrani",
+    "APPLY": "Uporabi",
+    "COLOR": "Barva",
+    "OPTIONS": "Možnosti",
+    "LOAD": "Load",
+    "CLOSE": "Zapri",
+    "SEARCH": "Iskanje",
+    "DATE": "Datum",
+    "LANG": {
+        "BUTTON": "Jezik",
+        "EN": "Angleško",
+        "PL": "Poljsko",
+        "SI": "Slovensko",
+        "DE": "Nemško"
+    },
+    "DOWNLOAD": "Prenos",
+    "COLOR_PICKER": {
+        "TITLE": "Izbirnik barve"
+    },
+    "DATATABLES": {
+        "emptyTable": "V tabeli ni razpoložljivih podatkov",
+        "info": "Prikaz _START_ do _END_ od _TOTAL_ vpisov",
+        "infoEmpty": "Prikaz 0 do 0 od 0 vpisov",
+        "infoFiltered": "(filtrirano iz _MAX_ skupnih vpisov)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Prikaže _MENU_ vpise",
+        "loadingRecords": "Nalagam...",
+        "processing": "Proceasiram...",
+        "search": "Išèi:",
+        "zeroRecords": "Ne najdem ujemajoèih vpisov",
+        "paginate": {
+            "first": "Prvi",
+            "last": "Zadnji",
+            "next": "Nasledni",
+            "previous": "Predhodni"
+        },
+        "aria": {
+            "sortAscending": ": izberi za razvršèanje stolpcev v narašèajoèem zaporedju",
+            "sortDescending": ": izberi za razvršèanje stolpcev v podajoèem zaporedju"
+        }
+    }
+}

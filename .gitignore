@@ -1,0 +1,9 @@
+build/
+*.sublime-workspace
+node_modules/
+bower_components/
+/js
+docs/**
+!docs/conf.json
+config.js
+push_open_to_github.sh

@@ -1,0 +1,14 @@
+{
+    "CONFIG": {
+        "TITLE": "Konfiguracja",
+        "DESC": "Pozwala na dostęp i przechowywanie parametrów konfiguracyjnych w przeglądarce i opcjonalnie na serwerze.",
+        "ENTRY": "Pozycja",
+        "VALUE": "Wartość",
+        "RESET": "Reset",
+        "RESET_ALL": "Resetuj wszystko",
+        "MAIN_GROUP": "Główne",
+        "AUTOSTART_GROUP": "Automatyczny start wtyczek",
+        "DEBUG_GROUP": "Rozwiązywanie problemów",
+        "MTCENTER_URL": "Adres URL serweru MTCenter"
+    }
+}

@@ -1,0 +1,18 @@
+<form class="login-form col-lg-4" ng-submit="loginCtrl.login()" >
+	<h1>ViewCenter</h1>
+	<h2>Login</h2>
+	<div class="input-prepend">
+		<span class="add-on">
+			<i class="icon-user inline"></i>
+		</span>
+		<input class="inline input-block-level" type="text" placeholder="{{AUTH.PLACEHOLDER.USERNAME | translate}}" ng-model="loginCtrl.user.username" />
+	</div>
+	<div class="input-prepend">
+		<span class="add-on">
+			<i class="icon-pencil inline"></i>
+		</span>
+		<input class="inline input-block-level" type="password" placeholder="{{AUTH.PLACEHOLDER.PASSWORD | translate}}" ng-model="loginCtrl.user.password" />
+	</div>
+	<button class="btn btn-large btn-primary" type="submit">Login</button>
+	<div class="{{loginCtrl.message.class}}" ng-show="loginCtrl.message.show" role="alert" translate >{{loginCtrl.message.text}}</div>
+</form>

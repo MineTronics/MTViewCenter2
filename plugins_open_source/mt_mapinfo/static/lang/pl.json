@@ -1,0 +1,52 @@
+{
+    "MAP": {
+        "TITLE": "Mapa",
+        "DESC": "Ładowanie i wyświetlanie mapy. Wymaga włączenia wtyczki wizualizacji.",
+        "NAME": "Nazwa mapy",
+        "UPLOADED": "Dodano do bazy danych",
+        "NONE": "Mapa nie została załadowana",
+        "UPLOAD": "Wyślij mapę do bazy danych",
+        "DEFAULT": "Mapa domyślna",
+        "LOAD_FROM_FILE": "Wczytaj mapę z pliku",
+        "REFRESH_LIST": "Odśwież listę dostępnych map",
+        "REFRESH_LIST_IN_PROGRESS": "Odświeżanie listy...",
+        "CONFIG_GROUP": "Wtyczka mapy",
+        "CONFIG_DEFAULT_MAP": "ID domyślnej mapy do załadowania na starcie",
+        "DRAWING_PRIMITIVE": "Rysuj elementy mapy jako proste objekty",
+        "FALLBACK_MAP": "Lokalizacja mapy awaryjnej umieszczonej na serwerze MTViewCenter",
+        "AUTOSTART": "Automatyczny start wtyczki mapy",
+        "LAYER": {
+            "HEADER": "Warstwy",
+            "VISIBLE": "Widoczna",
+            "NAME": "Nazwa",
+            "HIDE_INFO": "Odznacz, aby ukryć warstwę",
+            "PRIORITY": "Priorytet",
+            "COLOR": "Kolor",
+            "SHOW_ALL": "Pokaż wszystkie",
+            "HIDE_ALL": "Ukryj wszystkie"
+        },
+        "ERROR": {
+            "NULL": "Nie wybrano mapy do narysowania.",
+            "LOADING": "Nie załadowano danych mapy: {{details}}.",
+            "PARSING": "Plik {{filename}} nie może być przetworzony: {{details}}.",
+            "DRAWING": "Nie można narysować mapy: {{details}}.",
+            "MAPCENTER": "Nie otrzymano danych z MTMapCenter: {{details}}",
+            "SEND": "Nie udało się wysłać danych do MTMapCenter: {{details}}"
+        },
+        "SENDING": "Wysyłanie danych mapy...",
+        "SEND_SUCC": "Wysłano mapę do bazy danych.",
+        "PARSING": "Przetwarzanie danych mapy...",
+        "PARSING_DONE": "Zakończono przetwarzanie",
+        "DRAW_MAP": "Rysuj mapę",
+        "DRAWING": "Rysowanie mapy...",
+        "REMOVING": "Usuwanie danych poprzednio załadowanej mapy...",
+        "IGNORE_ALL_LAYERS": "Ignoruj wszystkie warstwy",
+        "FILE": {
+            "READING": "Czytanie pliku...",
+            "LOADED": "Plik wczytano",
+            "SIZE": "Wielkość pliku",
+            "LINES": "Liczba linii",
+            "ERROR": "Nie można odczytać tego pliku"
+        }
+    }
+}

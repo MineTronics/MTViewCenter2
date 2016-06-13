@@ -1,0 +1,14 @@
+{
+    "CONFIG": {
+        "TITLE": "Configuration",
+        "DESC": "Allows accessing and storing configuration parameters in browser's storage and/or on remote server.",
+        "ENTRY": "Entry",
+        "VALUE": "Value",
+        "RESET": "Reset",
+        "RESET_ALL": "Reset all",
+        "MAIN_GROUP": "Main",
+        "AUTOSTART_GROUP": "Automatic start of plugins",
+        "DEBUG_GROUP": "Troubleshooting",
+        "MTCENTER_URL": "URL address of the MTCenter server"
+    }
+}

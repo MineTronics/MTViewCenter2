@@ -1,0 +1,5 @@
+{
+    "dependencies": {
+        "jquery.soap": "~1.6.5"
+    }
+}

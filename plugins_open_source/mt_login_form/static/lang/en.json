@@ -1,0 +1,12 @@
+{
+    "AUTH": {
+        "TITLE": "Login",
+        "DESC": "Manages authentication form.",
+        "SUCCESS": "Successfully logged in. Plugins are being downloaded.",
+        "FAIL": "Failed to login.",
+        "PLACEHOLDER": {
+            "USERNAME": "Username, e.g. mine",
+            "PASSWORD": "Password, e.g. tronics"
+        }
+    }
+}

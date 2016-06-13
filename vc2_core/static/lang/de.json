@@ -1,0 +1,54 @@
+{
+    "ENABLED": "aktiviert",
+    "PLUGIN_NAME": "Plugin Name",
+    "DESCR": "Bechreibung",
+    "VER": "Version",
+    "AUTHOR": "Autor",
+    "SIGNED": "Signiert",
+    "LAST_UPD": "Letztes update",
+    "UPDATES": "Updates",
+    "PLUGINS": "Plugins",
+    "RESET": "Reset",
+    "SAVE": "Save",
+    "APPLY": "Anwenden",
+    "COLOR": "Farbe",
+    "OPTIONS": "Optionen",
+    "LOAD": "Laden",
+    "CLOSE": "Schließen",
+    "SEARCH": "Suchen",
+    "DATE": "Datum",
+    "LANG": {
+        "BUTTON": "Sprache",
+        "EN": "Englisch",
+        "PL": "Polnisch",
+        "SI": "Slowenisch",
+        "DE": "Deutsch"
+    },
+    "DOWNLOAD": "Download",
+    "COLOR_PICKER": {
+        "TITLE": "Farbauswahl"
+    },
+    "DATATABLES": {
+        "emptyTable": "Keine Daten vorhanden",
+        "info": "Zeige _START_ bis _END_ von _TOTAL_ Einträgen",
+        "infoEmpty": "Zeige 0 bis 0 von 0 Einträgen",
+        "infoFiltered": "( _MAX_ einträge gefiltert)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Zeige _MENU_ Einträge",
+        "loadingRecords": "Lade...",
+        "processing": "Verarbeite...",
+        "search": "Suche:",
+        "zeroRecords": "kein passenden Einträge gefunden",
+        "paginate": {
+            "first": "erste",
+            "last": "letzte",
+            "next": "nächste",
+            "previous": "vorherige"
+        },
+        "aria": {
+            "sortAscending": ": aktivieren um Spalte aufsteigend zu sortieren",
+            "sortDescending": ": aktivieren um Spalte absteigend zu sortieren"
+        }
+    }
+}

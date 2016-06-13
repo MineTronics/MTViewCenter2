@@ -1,0 +1,14 @@
+{
+    "VIS": {
+        "TITLE": "Vizualizacija",
+        "DESC": "Glavni vizualizacijski modul. Uporabniku omogoèa 3D pogled premogovnikain prikaž dodatnih informacij, kot so temperatura ali vlaga.",
+        "VIEWS": "Pogledi",
+        "CAMERA": {
+            "DEFAULT": "Privzeto",
+            "TOP": "Zgoraj",
+            "N_S": "Sever-Jug",
+            "W_E": "Zahod-Vzhod",
+            "ANGLE": "Kot"
+        }
+    }
+}

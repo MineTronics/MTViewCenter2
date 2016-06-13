@@ -1,0 +1,56 @@
+{
+    "MAP": {
+        "TITLE": "Map",
+        "DESC": "Loading and displaying default Map in visualisation center. Requires mt/vis2.",
+        "NAME": "Map name",
+        "UPLOADED": "Added to database",
+        "NONE": "No map has been loaded yet",
+        "UPLOAD": "Send map to database",
+        "DEFAULT": "Default map",
+        "LOAD_FROM_FILE": "Load map from file",
+        "REFRESH_LIST": "Refresh list of available maps",
+        "REFRESH_LIST_IN_PROGRESS": "Refreshing list...",
+        "CONFIG_GROUP": "Map plugin",
+        "CONFIG_DEFAULT_MAP": "ID of default map to load on start",
+        "DRAWING_PRIMITIVE": "Draw map elements using simple objects",
+        "FALLBACK_MAP": "Location of fallback map on MTViewCenter server",
+        "AUTOSTART": "Map plugin automatic start",
+        "LAYERS": "Map layers",
+        "LAYER": {
+            "HEADER": "Layers",
+            "VISIBLE": "Visible",
+            "NAME": "Name",
+            "HIDE_INFO": "Uncheck to hide layer",
+            "PRIORITY": "Priority",
+            "COLOR": "Color",
+            "SHOW_ALL": "Show all",
+            "HIDE_ALL": "Hide all",
+            "HIDDEN": "Hidden",
+            "IGNORE": "Ignore",
+            "DRAW": "Draw"
+        },
+        "ERROR": {
+            "NULL": "There is no map data to draw.",
+            "LOADING": "Could not load map data: {{details}}.",
+            "PARSING": "File {{filename}} could not be parsed: {{details}}.",
+            "DRAWING": "Map could not be drawn: {{details}}.",
+            "MAPCENTER": "Could not retrieve data from MTMapCenter: {{details}}",
+            "SEND": "Could not send data to the MTMapCenter: {{details}}"
+        },
+        "SENDING": "Sending map data...",
+        "SEND_SUCC": "Map has been successfully sent to the database.",
+        "PARSING": "Parsing map data...",
+        "PARSING_DONE": "Finished parsing",
+        "DRAW_MAP": "Draw map",
+        "DRAWING": "Drawing map...",
+        "REMOVING": "Removing previously loaded map data...",
+        "IGNORE_ALL_LAYERS": "Ignore all layers",
+        "FILE": {
+            "READING": "Reading file...",
+            "LOADED": "File loaded",
+            "SIZE": "File size",
+            "LINES": "Number of lines",
+            "ERROR": "Could not read this file"
+        }
+    }
+}

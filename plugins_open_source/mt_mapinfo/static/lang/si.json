@@ -1,0 +1,22 @@
+{
+    "MAP": {
+        "TITLE": "Karta",
+        "DESC": "NAlaganje in prikaz privzete karte v vizializacijskem strežniku. Zahteva mt/vis2. ",
+        "NAME": "Ime karte",
+        "UPLOADED": "Dodano v podatkovno bazo",
+        "NONE": "Karta še ni bila naložena",
+        "UPLOAD": "Pošlji karto do baze podatkov",
+        "DEFAULT": "Privzeto map",
+        "LOAD_FROM_FILE": "Load map iz datoteke",
+        "REFRESH_LIST": "Osveži seznam razpoložljivih zemljevidov",
+        "REFRESH_LIST_IN_PROGRESS": "Osvežilni seznam...",
+        "LAYER": {
+            "HEADER": "Plasti",
+            "VISIBLE": "Vidno",
+            "NAME": "Ime",
+            "HIDE_INFO": "Odkljukaj za skrivanje plasti",
+            "PRIORITY": "Prioriteta",
+            "COLOR": "Barva"
+        }
+    }
+}

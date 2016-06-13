@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LT:IRLTPPerf xmlns:IR="http://www.iredes.org/xml" xmlns:LT="http://www.iredes.org/xml/LHD" xmlns:opt="http://www.iredes.org/IRoption" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iredes.org/xml/LHD C:UsersminetronicsDesktopm201204-iredesApplicationProfilesMachineProfilesLT-LHD_V1.0LHDTrucks.xsd" LTPPerfVersion="V 1.0" LTPPerfDownwCompat="V 1.0" IRVersion="V 1.3" IRDownwCompat="V 1.3">
+	<IR:GenHead>
+		<IR:FileCreateDate>2015-04-10T12:31:16.00</IR:FileCreateDate>
+		<IR:IRversion DownwCompat="V 1.3">V 1.4</IR:IRversion>
+	</IR:GenHead>
+	<IR:SiteHead>
+		<IR:SiteOptions />        
+	</IR:SiteHead>
+	<IR:ReportId>2015-04-10T12:31:16.00</IR:ReportId>
+	<IR:StartLogTime>2015-04-10T12:31:16.00</IR:StartLogTime>
+	<IR:EndLogTime>1</IR:EndLogTime>
+	<LT:LTPPLoadRep>
+		<LT:LTPPCyclTot>1</LT:LTPPCyclTot>
+		<LT:LTPPdistTot>100</LT:LTPPdistTot>
+		<LT:LTPPloadTot>10</LT:LTPPloadTot>
+		<LT:LTPPMission>
+			<LT:LTPPMisSeq></LT:LTPPMisSeq>
+			<LT:LTPPMptFromN></LT:LTPPMptFromN>
+			<LT:LTPPMptToN></LT:LTPPMptToN>
+			<LT:LTPPMisstart></LT:LTPPMisstart>
+			<LT:LTPPMissEnd></LT:LTPPMissEnd>
+			<LT:LTPPMaction></LT:LTPPMaction>
+			<LT:LTPPMpayld></LT:LTPPMpayld>
+			<LT:LTPPMtramEnd></LT:LTPPMtramEnd>
+			<LT:LTPPMtramDist></LT:LTPPMtramDist>
+		</LT:LTPPMission>
+	</LT:LTPPLoadRep>
+	<LT:LTPPeqpOpt>
+		<LT:fuel>36</LT:fuel>
+	</LT:LTPPeqpOpt>
+	<IR:GenTrailer>
+		<IR:FileCloseDate>2015-04-10T12:31:16.00</IR:FileCloseDate>
+		<IR:ChkSum>ENETR the HexCheckSum here</IR:ChkSum>
+	</IR:GenTrailer>
+</LT:IRLTPPerf>

@@ -1,0 +1,37 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"sh",
+				"-c",
+				"echo Building; make"
+			],
+			"selector": "source.json,source.jade", 
+			// "fileTypes": ["make"],
+			// "scopeName": "source.json", 
+			"name": "Make project",
+			// "path": "/c/WinAVR-20100110/utils/bin/:/c/Program Files (x86)/Git/bin/:/c/Program Files/Git/bin/:/c/Program\\ Files/CodeBlocks/MinGW/bin/:/bin:/usr/local/bin:/mingw/bin:/c/Windows/System32:\\$PATH",
+			"working_dir": "${project_path:${folder}}"
+		}
+	],
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		},{
+			"follow_symlinks": true,
+			"path": "/tmp"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/var/www/html/exwb"
+		}
+	]
+	,"settings": {
+		"build_on_save": 1
+		,"post_save_cmd": ["make", "notifyBrowserAboutUpdate"]
+	}
+}

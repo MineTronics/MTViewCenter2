@@ -1,0 +1,23 @@
+{
+    "VIS": {
+        "TITLE": "Visualisation",
+        "DESC": "Main visualisation module. Alows user to view mine in 3D and allows displaying additional data such as temperature or humidity",
+        "VIEWS": "Views",
+        "CAM": "Camera",
+        "TOP_COLOR": "Top Color",
+        "BACKGROUND": "Background",
+        "BOTTOM_COLOR": "Bottom Color",
+        "AUTOSTART": "Visualisation plugin automatic start",
+        "CAMERA": {
+            "DEFAULT": "Defaut",
+            "TOP": "Top",
+            "N_S": "North-South",
+            "W_E": "West-East",
+            "ANGLE": "Angle"
+        },
+        "CAMERA_DEFAULT_EYE": "Camera default 'eye' point",
+        "CAMERA_DEFAULT_LOOK_AT": "Camera default 'lookAt' point",
+        "CAMERA_DEFAULT_UP": "Camera default 'up' vector",
+        "CAMERA_DEFAULT_VIEW_NAME": "Map default view (key name)"
+    }
+}

@@ -48,7 +48,7 @@ easily make a first testrun
 ```sh
 node scripts/install_dep.js vc2_core/default_config.js
 ```
-or alternatively
+or alternatively (this will not install plugins dependencies)
 
 ```sh
 $ npm install

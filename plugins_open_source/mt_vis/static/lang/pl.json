@@ -4,6 +4,9 @@
         "DESC": "Wtyczka odpowiedzialna za wizualizację mapy i urządzeń oraz dodatkowych danych jak wilgotność, czy temperatura.",
         "VIEWS": "Widoki",
         "CAM": "Kamera",
+        "TOP_COLOR": "Górny kolor",
+        "BACKGROUND": "Tło",
+        "BOTTOM_COLOR": "Dolny kolor",
         "AUTOSTART": "Automatyczny start wtyczki wizualizacji",
         "CAMERA": {
             "DEFAULT": "Domyślny",
@@ -11,6 +14,10 @@
             "N_S": "Północ-południe",
             "W_E": "Zachód-wschód",
             "ANGLE": "Kąt"
-        }
+        },
+        "CAMERA_DEFAULT_EYE": "Domyślny punkt oka kamery",
+        "CAMERA_DEFAULT_LOOK_AT": "Domyślny punkt patrzenia kamery",
+        "CAMERA_DEFAULT_UP": "Domyślny wektor 'góry' kamery",
+        "CAMERA_DEFAULT_VIEW_NAME": "Domyślny widok (nazwa klucza)"
     }
 }

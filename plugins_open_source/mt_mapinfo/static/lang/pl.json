@@ -15,6 +15,7 @@
         "DRAWING_PRIMITIVE": "Rysuj elementy mapy jako proste objekty",
         "FALLBACK_MAP": "Lokalizacja mapy awaryjnej umieszczonej na serwerze MTViewCenter",
         "AUTOSTART": "Automatyczny start wtyczki mapy",
+        "LAYERS": "Warstwy mapy",
         "LAYER": {
             "HEADER": "Warstwy",
             "VISIBLE": "Widoczna",
@@ -23,7 +24,10 @@
             "PRIORITY": "Priorytet",
             "COLOR": "Kolor",
             "SHOW_ALL": "Pokaż wszystkie",
-            "HIDE_ALL": "Ukryj wszystkie"
+            "HIDE_ALL": "Ukryj wszystkie",
+            "HIDDEN": "Ukryj",
+            "IGNORE": "Ignoruj",
+            "DRAW": "Rysuj"
         },
         "ERROR": {
             "NULL": "Nie wybrano mapy do narysowania.",

@@ -151,7 +151,7 @@ function addPluginModule(grunt, config, pluginModule, pluginsDirs) {
         } else {
             var plugin = config.appConfig.plugin,
                 plugins = grunt.config('appConfig.plugins'),
-                requirejsModules = grunt.config('requirejs.options.modules');
+                requirejsModules = grunt.config.getRaw('requirejs.options.modules');
 
             plugin.modulePath = pluginModule;
             plugins.push(plugin);

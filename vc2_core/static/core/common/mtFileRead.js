@@ -5,22 +5,22 @@ define(['angular'], function (angular) {
      * contents on the scope.
      * @returns {object} directive
      */
-    function fileread() {
+    function mtFileRead() {
         return {
             scope: {
-                fileread: '=',
-                onFileReadEvent: '&?'
+                onEvent: '&'
             },
             link: function (scope, element) {
                 /**
-                 * Call onFileReadEvent listener about file read event.
-                 * @param {object} event FileReader event
+                 * Call onEvent listener about file read event.
+                 * @param {object} event onEvent event
                  * @param {string} type event type
                  * @returns {undefined}
                  */
                 function sendEvent(event, type) {
-                    if (angular.isFunction(scope.onFileReadEvent)) {
-                        scope.onFileReadEvent({
+                    console.log('sending event', scope.onEvent);
+                    if (angular.isFunction(scope.onEvent)) {
+                        scope.onEvent({
                             event: event,
                             type: type
                         });
@@ -33,26 +33,37 @@ define(['angular'], function (angular) {
                  */
                 element.bind('change', function (changeEvent) {
                     sendEvent(changeEvent, 'change');
-                    var reader = new FileReader();
+                    var reader = new FileReader(), i;
                     reader.onload = function (loadEvent) {
                         sendEvent(loadEvent, 'load');
-                        scope.$apply(function () {
-                            scope.fileread = {
-                                name: changeEvent.target.value,
-                                size: loadEvent.loaded,
-                                content: loadEvent.target.result
-                            };
-                        });
+                        var loadedFile  = {
+                            name: changeEvent.target.value,
+                            size: loadEvent.loaded,
+                            content: loadEvent.target.result
+                        };
+                        sendEvent(loadedFile, 'mtLoadedFile');
+                        i++;
+                        if (changeEvent.target.files[i]) {
+                            reader.readAsBinaryString(changeEvent.target.files[i]);
+                        }
                     };
                     reader.onerror = function (errorEvent) {
                         sendEvent(errorEvent, 'error');
+                        i++;
+                        if (changeEvent.target.files[i]) {
+                            reader.readAsBinaryString(changeEvent.target.files[i]);
+                        }
                     };
 
-                    reader.readAsBinaryString(changeEvent.target.files[0]);
+                    i = 0;
+                    //Read first file
+                    if (changeEvent.target.files[i]) {
+                        reader.readAsBinaryString(changeEvent.target.files[i]);
+                    }
                 });
             }
         };
     }
 
-    return fileread;
+    return mtFileRead;
 });

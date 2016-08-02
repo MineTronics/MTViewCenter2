@@ -4,8 +4,9 @@ define([
     'jquery-ui',
     'core/common/mtdatatable',
     'core/common/mtColorPicker/mtColorHelper',
-    'core/common/mtColorPicker/mtColorPicker'
-], function (angular, $, $ui, mtDatatableModule, mtColorHelper, mtColorPicker) {
+    'core/common/mtColorPicker/mtColorPicker',
+    'core/common/mtFileRead'
+], function (angular, $, $ui, mtDatatableModule, mtColorHelper, mtColorPicker, mtFileRead) {
     'use strict';
 
     function compile($compile) {
@@ -116,7 +117,8 @@ define([
         .directive('hideAfterBootstrap', hideAfterBootstrap)
         .factory('mtColorHelper', mtColorHelper)
         .directive('mtColorPicker', mtColorPicker)
-        .factory('mtUtil', mtUtil);
+        .factory('mtUtil', mtUtil)
+        .directive('mtFileRead', mtFileRead);
 
     return 'mt.common';
 });

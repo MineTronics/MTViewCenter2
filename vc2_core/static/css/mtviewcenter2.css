@@ -449,3 +449,20 @@ will be on top. It has lower 'priority' than .node-label:hover*/
 .form-control.width-sm, .width-sm {
 	width: 100px;
 }
+
+.mtFileRead {
+    position: relative;
+    overflow: hidden;
+}
+
+.mtFileRead input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}

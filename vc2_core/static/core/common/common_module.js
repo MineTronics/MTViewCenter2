@@ -5,8 +5,9 @@ define([
     'core/common/mtdatatable',
     'core/common/mtColorPicker/mtColorHelper',
     'core/common/mtColorPicker/mtColorPicker',
-    'core/common/mtFileRead'
-], function (angular, $, $ui, mtDatatableModule, mtColorHelper, mtColorPicker, mtFileRead) {
+    'core/common/mtFileRead',
+    'core/common/localMoment'
+], function (angular, $, $ui, mtDatatableModule, mtColorHelper, mtColorPicker, mtFileRead, localMoment) {
     'use strict';
 
     function compile($compile) {
@@ -118,7 +119,8 @@ define([
         .factory('mtColorHelper', mtColorHelper)
         .directive('mtColorPicker', mtColorPicker)
         .factory('mtUtil', mtUtil)
-        .directive('mtFileRead', mtFileRead);
+        .directive('mtFileRead', mtFileRead)
+        .constant('localMoment', localMoment);
 
     return 'mt.common';
 });

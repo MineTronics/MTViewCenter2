@@ -449,35 +449,3 @@ will be on top. It has lower 'priority' than .node-label:hover*/
 .form-control.width-sm, .width-sm {
 	width: 100px;
 }
-
-.lhd-gantt-task {
-	min-width: 22px;
-}
-
-.lhd-gantt .gantt-task:hover {
-	min-width: 100px;
-	z-index: 1500;
-}
-
-.lhd-gantt-task .gantt-task-background {
-	background-color: inherit;
-}
-
-/*To center gant-task-content vertically */
-.lhd-gantt-task .gantt-task-content > span > span {
-	line-height: 1.5em;
-}
-
-.lhd-gantt-task .gantt-task-content > span {
-	margin-left: 4px;
-	margin-right: 4px;
-}
-
-.lhd-gantt .gantt-table-column {
-	min-width: 160px;
-}
-
-.lhd-gantt-last-shift-header {
-	position: relative; 
-	top: 4em;
-}

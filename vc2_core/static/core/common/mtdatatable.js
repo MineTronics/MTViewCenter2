@@ -67,7 +67,8 @@ define(['angular', 'datatables', 'core/i18n/i18n_module'], function (angular, da
         }
 
         return {
-            createDatatable: createDatatable
+            createDatatable: createDatatable,
+            translateDtKeys: translateDtKeys
         };
     }
     mtDatatableFactory.$inject = ['$translate'];

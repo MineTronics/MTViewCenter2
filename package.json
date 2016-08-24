@@ -58,7 +58,9 @@
         "matchdep": "0.1.1"
     },
     "scripts": {
-        "preinstall": "sudo npm install -g mocha requirejs",
+        "install_default_deps": "scripts/install_dep.sh vc2_core/default_config.js",
+        "install_deps": "scripts/install_dep.sh vc2_core/config.js",
+        "old_install": "sudo npm install -g mocha requirejs",
         "mt_undo_preinstall": "sudo npm r -g mocha requirejs; npm cache clean"
     }
 }

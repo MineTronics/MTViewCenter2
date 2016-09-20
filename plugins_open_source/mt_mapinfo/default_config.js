@@ -1,7 +1,6 @@
 module.exports = {
     appConfig: {
         plugin: {
-            autostart: true,
             title: 'MAP.TITLE',
             description: 'MAP.DESC',
             version: 2.0,
@@ -14,7 +13,7 @@ module.exports = {
         configDefaults: {
             default_map_id: null,
             fallback_map_location: 'static/mapinfo.json',
-            mapinfo_autostart: true,
+            mt_mapinfo_autostart: true,
             allow_extrapolating: false,
             allow_map_exporting_as_json: false
         }

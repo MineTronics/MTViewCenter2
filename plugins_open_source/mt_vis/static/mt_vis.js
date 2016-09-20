@@ -72,7 +72,7 @@ define([
     return {
         enable: function ($injector) {
             var configTable = $injector.get('configTable');
-            configTable.addKey('visualisation_autostart', 'VIS.AUTOSTART', 'CONFIG.AUTOSTART_GROUP');
+            configTable.addKey('mt_vis_autostart', 'VIS.AUTOSTART', 'CONFIG.AUTOSTART_GROUP');
         }
     };
 });

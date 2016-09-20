@@ -1,7 +1,6 @@
 module.exports = {
     appConfig: {
         plugin: {
-            autostart: true,
             title: 'VIS.TITLE',
             description: 'VIS.DESC',
             version: 2.0,
@@ -13,7 +12,7 @@ module.exports = {
         },
         configDefaults: {
             drawing_primitive: true,
-            visualisation_autostart: true,
+            mt_vis_autostart: true,
             camera_default_eye_vector: '0,0,-30',
             camera_default_lookAt_vector: '0,0,0',
             camera_default_up_vector: '0,1,0',

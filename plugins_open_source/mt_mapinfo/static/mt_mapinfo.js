@@ -56,8 +56,8 @@ define([
     return {
         enable: function ($injector) {
             var configTable = $injector.get('configTable');
-            configTable.addKey('mapinfo_autostart', 'MAP.AUTOSTART', 'CONFIG.AUTOSTART_GROUP');
-            configTable.addKey('mapinfo_autostart', 'MAP.AUTOSTART', 'MAP.CONFIG_GROUP');
+            configTable.addKey('mt_mapinfo_autostart', 'MAP.AUTOSTART', 'CONFIG.AUTOSTART_GROUP');
+            configTable.addKey('mt_mapinfo_autostart', 'MAP.AUTOSTART', 'MAP.CONFIG_GROUP');
             configTable.addKey('default_map_id', 'MAP.CONFIG_DEFAULT_MAP', 'MAP.CONFIG_GROUP');
             configTable.addKey('drawing_primitive', 'MAP.DRAWING_PRIMITIVE', 'MAP.CONFIG_GROUP');
             configTable.addKey('fallback_map_location', 'MAP.FALLBACK_MAP', 'MAP.CONFIG_GROUP');

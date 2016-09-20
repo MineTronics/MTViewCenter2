@@ -14,16 +14,17 @@ define(['angular', 'core/config/config_module', 'text!core/plugin/plugin_table.h
      * @param {object} $q Angular's $q service to propagate promises errors when
      * @returns {object} factory
      */
-    function pluginService($rootScope, $http, PLUGINS, $q) {
+    function pluginService($rootScope, $http, PLUGINS, $q, config) {
         var self = {
-            //Layout containers
-            header: {},
-            tabs: {},
-            footer: {},
+                //Layout containers
+                header: {},
+                tabs: {},
+                footer: {},
 
-            //Angular $injector service
-            $injector: undefined
-        };
+                //Angular $injector service
+                $injector: undefined
+            },
+            AUTOSTART_SUFFIX = '_autostart';
 
         /**
          * Adds (removes) plugin's UI components to layout containers.
@@ -89,11 +90,47 @@ define(['angular', 'core/config/config_module', 'text!core/plugin/plugin_table.h
         /**
          * Returns true if plugin should be enabled automatically on aplication 
          * start.
+         * Plugin can be set to autostart in 3 ways in this order:
+         * 1. Create a custom config entry to a true value. Set plugin's 
+         *    'autostartConfigEntry' to name of that config entry.
+         * 2. Set a 'PLUGIN_NAME_autostart' config entry to true value.
+         * 3. Set plugin's 'autostart' property to true value.
          * @param {object} plugin Plugin
          * @returns {Boolean}
          */
         function isAutostart(plugin) {
+            var configProp = plugin.autostartConfigEntry;
+
+            if (angular.isString(configProp) && configProp) {
+                return !!config.data[configProp];
+            }
+
+            configProp = plugin.modulePath + AUTOSTART_SUFFIX;
+            if (angular.isDefined(config.data[configProp])) {
+                return !!config.data[configProp];
+            }
+
             return !!plugin.autostart;
+        }
+
+        /**
+         * Sets plugin's autostart flag synchronized with configuration. Plugin
+         * will autostart if it's enabled.
+         * This will create a config entry PLUGIN_NAME_AUTOSTART_SUFFIX if it
+         * doesn't exist. 
+         * @param {type} plugin
+         * @returns {undefined}
+         */
+        function setPluginAutostart(plugin) {
+            var isAutostartOn = plugin.enabled,
+                configProp = plugin.autostartConfigEntry;
+
+            if (angular.isString(configProp) && configProp) {
+                config.data[configProp] = isAutostartOn;
+            } else {
+                configProp = plugin.modulePath + AUTOSTART_SUFFIX;
+                config.data[configProp] = isAutostartOn;
+            }
         }
 
         /**
@@ -143,6 +180,7 @@ define(['angular', 'core/config/config_module', 'text!core/plugin/plugin_table.h
                     pluginApi.enable(self.$injector);
                 }
                 plugin.enabled = true;
+                setPluginAutostart(plugin);
                 $rootScope.$apply(function () {
                     togglePluginComponents(plugin);
                     $rootScope.$emit('mt.pluginLoaded', plugin.modulePath);
@@ -163,6 +201,7 @@ define(['angular', 'core/config/config_module', 'text!core/plugin/plugin_table.h
             if (plugin.pluginApi && angular.isFunction(plugin.pluginApi.disable)) {
                 plugin.pluginApi.disable(self.$injector);
             }
+            setPluginAutostart(plugin);
             togglePluginComponents(plugin);
             delete plugin.pluginApi;
         }
@@ -211,7 +250,7 @@ define(['angular', 'core/config/config_module', 'text!core/plugin/plugin_table.h
         self.loadPendingPlugins = function () {
             PLUGINS
                 .filter(function (plugin) {
-                    return plugin.autostart && !plugin.enabled;
+                    return isAutostart(plugin) && !plugin.enabled;
                 })
                 .forEach(enablePlugin);
         };
@@ -256,7 +295,7 @@ define(['angular', 'core/config/config_module', 'text!core/plugin/plugin_table.h
 
         return self;
     }
-    pluginService.$inject = ['$rootScope', '$http', 'PLUGINS', '$q'];
+    pluginService.$inject = ['$rootScope', '$http', 'PLUGINS', '$q', 'config'];
 
     function mtTabCtrl(pluginService) {
         var vm = this,

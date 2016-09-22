@@ -7,8 +7,10 @@ define([
     'use strict';
     var configModuleName = 'mt.config',
         appConfig = angular.fromJson(appConfigJSON),
+        LANGUAGES = appConfig.languages,
         APP_DEFAULTS = appConfig.configDefaults,
-        PLUGINS = appConfig.plugins;
+        PLUGINS = appConfig.plugins,
+        LOCAL_STORAGE_PREFIX = 'mt';
 
     PLUGINS.forEach(function (plugin) {
         plugin.enabled = false;
@@ -115,7 +117,7 @@ define([
 
     function configureLocalStorage(localStorageServiceProvider) {
         localStorageServiceProvider
-            .setPrefix('mt')
+            .setPrefix(LOCAL_STORAGE_PREFIX)
             // can also be set to sessionStorage
             .setStorageType('localStorage')
             // do not send broadcast about setting or removing an item
@@ -125,6 +127,7 @@ define([
 
     angular
         .module(configModuleName, ['LocalStorageModule'])
+        .constant('LANGUAGES', LANGUAGES)
         .constant('APP_DEFAULTS', APP_DEFAULTS)
         .constant('PLUGINS', PLUGINS)
         .config(configureLocalStorage)

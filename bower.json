@@ -36,6 +36,7 @@
         "angular-translate": "2.11",
         "angular-translate-loader-static-files": "2.11",
         "angular-translate-handler-log": "2.11",
+        "angular-translate-storage-local": "2.11.1",
         "angular-animate": "1.5.5",
         "moment": "~2.9.0",
         "datatables": "1.10.8",

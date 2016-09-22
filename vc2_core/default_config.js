@@ -154,6 +154,9 @@ module.exports = {
         'ng-translate': '<%= bower_components %>/angular-translate/angular-translate',
         'ng-translate-loader': '<%= bower_components %>/angular-translate-loader-static-files/angular-translate-loader-static-files',
         'ng-translate-logger': '<%= bower_components %>/angular-translate-handler-log/angular-translate-handler-log',
+        'ng-cookies': '<%= bower_components %>/angular-cookies/angular-cookies',
+        'ng-translate-storage-cookie': '<%= bower_components %>/angular-translate-storage-cookie/angular-translate-storage-cookie',
+        'ng-translate-storage-local': '<%= bower_components %>/angular-translate-storage-local/angular-translate-storage-local',
         'bootstrap-ui-tpls': '<%= bower_components %>/angular-bootstrap/ui-bootstrap-tpls',
         'text': '<%= bower_components %>/text/text',
         'moment': '<%= bower_components %>/moment/moment',
@@ -167,6 +170,9 @@ module.exports = {
         "angular": {
             deps: ['jquery'],
             exports: "angular"
+        },
+        'ng-cookies': {
+            deps: ['angular']
         },
         "angular-animate": {
             deps: ['angular']
@@ -182,6 +188,12 @@ module.exports = {
         },
         'ng-translate-logger': {
             deps: ['angular', 'ng-translate']
+        },
+        'ng-translate-storage-cookie': {
+            deps: ['angular', 'ng-cookies', 'ng-translate']
+        },
+        'ng-translate-storage-local': {
+            deps: ['angular', 'ng-translate', 'ng-translate-storage-cookie']
         },
         'bootstrap-ui-tpls': {
             deps: ['angular']

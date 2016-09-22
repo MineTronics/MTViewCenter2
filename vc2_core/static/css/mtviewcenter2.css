@@ -466,3 +466,16 @@ will be on top. It has lower 'priority' than .node-label:hover*/
     opacity: 0;
     filter: alpha(opacity=0);
 }
+
+/*
+    Displays warning in bootstrap-alert-warning style but without bottom margin if 
+    the local storage is not supported
+*/
+.config-alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}

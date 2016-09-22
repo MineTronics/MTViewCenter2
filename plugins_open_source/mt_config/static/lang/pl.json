@@ -9,6 +9,7 @@
         "MAIN_GROUP": "Główne",
         "AUTOSTART_GROUP": "Automatyczny start wtyczek",
         "DEBUG_GROUP": "Rozwiązywanie problemów",
-        "MTCENTER_URL": "Adres URL serweru MTCenter"
+        "MTCENTER_URL": "Adres URL serweru MTCenter",
+        "LS_NOT_SUPPORTED": "Konfiguracja nie może zostać zapisania ponieważ przeglądarka nie wspiera local storage."
     }
 }

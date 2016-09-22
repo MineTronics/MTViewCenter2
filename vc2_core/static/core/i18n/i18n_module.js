@@ -8,7 +8,7 @@ define([
     'ng-translate-storage-local' //Used language is remembered in local storage
 ], function (angular) {
     'use strict';
-    
+
     var i18nModuleName = 'mt.i18n';
 
     /**

@@ -9,6 +9,7 @@
         "MAIN_GROUP": "Main",
         "AUTOSTART_GROUP": "Automatic start of plugins",
         "DEBUG_GROUP": "Troubleshooting",
-        "MTCENTER_URL": "URL address of the MTCenter server"
+        "MTCENTER_URL": "URL address of the MTCenter server",
+        "LS_NOT_SUPPORTED": "Configuration can't be saved because this browser doesn't support local storage."
     }
 }

@@ -42,7 +42,6 @@ define([
      *
      *  Groups are defined using config.initGroup('map', 'MAP.GROUP');
      */
-
     function configFactory($rootScope, storage, APP_DEFAULTS) {
         //Private config scope used to synchronize all application data with local storage.
         var configScope = $rootScope.$new(true, $rootScope),
@@ -110,7 +109,8 @@ define([
         return {
             data: data,
             resetKey: resetKey,
-            reset: reset
+            reset: reset,
+            isLocalStorageSupported: storage.isSupported
         };
     }
     configFactory.$inject = ['$rootScope', 'localStorageService', 'APP_DEFAULTS'];

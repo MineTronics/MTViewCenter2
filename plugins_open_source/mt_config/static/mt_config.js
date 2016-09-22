@@ -55,6 +55,7 @@ define(['angular', 'text!config_tab.html'], function (angular, configTabTmpl) {
         var vm = this;
         vm.config = config.data;
         vm.rows = configTable.rows;
+        vm.isLocalStorageSupported = config.isLocalStorageSupported;
         vm.reset = function () {
             config.reset();
         };

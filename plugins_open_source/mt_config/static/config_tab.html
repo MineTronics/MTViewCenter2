@@ -1,25 +1,28 @@
 <div ng-controller="ConfigTabCtrl as configTabCtrl">
-	<table class="table">
-		<thead>
-			<tr class="font-lg bg-primary">
-				<th class="col-sm-5" translate>CONFIG.ENTRY</th>
-				<th class="col-sm-6" translate>CONFIG.VALUE</th>
-				<th class="col-sm-1">
-					<button class="btn btn-sm btn-default" ng-click="configTabCtrl.reset()" translate>CONFIG.RESET_ALL</button>
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="row in configTabCtrl.rows" ng-switch="::configTabCtrl.getRowType(row)">
-				<td ng-switch-when="group" class="bg-info font-bg" colspan="3" translate>{{::row}}</td>
-				<td ng-switch-when="entry" class="col-sm-5" translate>{{::row.i18n}}</td>
-				<td ng-switch-when="entry" class="col-sm-6">
-					<input class="col-sm-12" type="{{::configTabCtrl.getInputType(row.key)}}" ng-model="configTabCtrl.config[row.key]">
-				</td>
-				<td ng-switch-when="entry" class="col-sm-1">
-					<button class="btn btn-sm btn-default" ng-click="configTabCtrl.resetKey(row.key)" translate>CONFIG.RESET</button>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+    <div ng-show="!configTabCtrl.isLocalStorageSupported" class="config-alert" role="alert" translate>
+        CONFIG.LS_NOT_SUPPORTED
+    </div>
+    <table class="table">
+        <thead>
+            <tr class="font-lg bg-primary">
+                <th class="col-sm-5" translate>CONFIG.ENTRY</th>
+                <th class="col-sm-6" translate>CONFIG.VALUE</th>
+                <th class="col-sm-1">
+                    <button class="btn btn-sm btn-default" ng-click="configTabCtrl.reset()" translate>CONFIG.RESET_ALL</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="row in configTabCtrl.rows" ng-switch="::configTabCtrl.getRowType(row)">
+                <td ng-switch-when="group" class="bg-info font-bg" colspan="3" translate>{{::row}}</td>
+                <td ng-switch-when="entry" class="col-sm-5" translate>{{::row.i18n}}</td>
+                <td ng-switch-when="entry" class="col-sm-6">
+                    <input class="col-sm-12" type="{{::configTabCtrl.getInputType(row.key)}}" ng-model="configTabCtrl.config[row.key]">
+                </td>
+                <td ng-switch-when="entry" class="col-sm-1">
+                    <button class="btn btn-sm btn-default" ng-click="configTabCtrl.resetKey(row.key)" translate>CONFIG.RESET</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

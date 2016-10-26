@@ -174,7 +174,7 @@ module.exports = function (grunt) {
 
         /**
          * Combines language files used for i18n into bundles for each language.
-         * Enabled plugins' files are appended to the src array during the 
+         * Enabled plugins' files are appended to the src array during the
          * initialization.
          */
         build_lang_files: {
@@ -243,7 +243,10 @@ module.exports = function (grunt) {
                 logLevel: 1,
                 paths: '<%= paths %>',
                 shim: '<%= shim %>',
-                waitSeconds: '9',
+
+                // waitSeconds is not included in the bundle so it was moved to main.js
+                // waitSeconds: 9,
+
                 modules: [
                     {
                         name: 'bower_components',

@@ -12,9 +12,9 @@ html
             div.welcome-screen(hide-after-bootstrap then-show=".mt-tabs")
                 img(src="static/img/mt/MineTronicsLogo1024.jpg").mt-logo
                 div.jumbotron
-                    h3 Application is loading, please wait...
+                    h3(translate="APP_LOADING")
                     h3
-                        span.ng-class: isError(ng-cloak ng-if="expected > 0") Loading plugins...  ({{loaded}} / {{expected}})
+                        span.ng-class: isError(ng-cloak, ng-if="expected > 0", translate="PLUGINS_LOADING", translate-values="{loaded: loaded, expected: expected}")
             tabset.mt-tabs.row(i18n-button, style="display: none")
                 div(vcheader)
                     div(ng-repeat="(pluginName, header) in mtTabs.header", class="{{header.class}}", ng-show="{{header.show}}", compile="header.content")

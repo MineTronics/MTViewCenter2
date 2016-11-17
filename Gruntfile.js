@@ -323,6 +323,17 @@ module.exports = function (grunt) {
                     specs: 'plugins_open_source/**/test/*Spec.js',
                     template: require('grunt-template-jasmine-requirejs')
                 }
+            },
+            browser_static: {
+                //Monkey patch
+                src: 'vc2_core/test/requirejs_test_config.js',
+                options: {
+                    specs: ['plugins_*/*/test/**/*-spec.js', 'vc2_core/*/test/**/*-spec.js'],
+                    template: require('grunt-template-jasmine-requirejs'),
+                    templateOptions: {
+                        requireConfig: '<%= requirejs.options %>'
+                    }
+                }
             }
         },
 

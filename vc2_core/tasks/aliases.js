@@ -16,14 +16,20 @@ module.exports = function (grunt) {
         devTasks,
         runProdServerTasks;
 
-    grunt.registerTask('test', 'Runs JSlint against source files', [
+    grunt.registerTask('test', 'Runs JSlint and test specs against source files', [
         //Check for style errors in js source files
-        'jslint'
+        'jslint',
+        'clean:buildDir',
+        'copy:coreFiles',
+        'copy:customFiles',
+        'build_lang_files',
+        'build-app-config',
+        'jasmine:browser_static'
     ]);
 
     devTasks = [
         //Check the source for possible bugs and style inconsistencies
-        'test',
+        'jslint',
         //Clean build directory
         'clean:buildDir',
         //Copy vc2_core/static, vc2_core/test, vc2_core/views to build
@@ -35,6 +41,8 @@ module.exports = function (grunt) {
         'build_lang_files',
         //Create browser config file by extracting it from config.js
         'build-app-config',
+        //Run unit tests
+        'jasmine:browser_static',
         //Copy source files (:dev target will NOT concatenate and minify it)
         'requirejs:dev',
         //Concatenate all the css files to one file
@@ -53,7 +61,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('prod', 'Alias for running tasks during staging production', [
         //Check the source for possible bugs and style inconsistencies
-        'test',
+        'jslint',
 
         //Clean both the build and dist directories
         'clean',
@@ -67,7 +75,8 @@ module.exports = function (grunt) {
         'build_lang_files',
         //Create browser config file by extracting it from config.js
         'build-app-config',
-
+        //Run unit tests
+        'jasmine:browser_static',
         //Copy, concatenate and minify source files - no additional shim or paths configuration is required
         'requirejs:prod',
 

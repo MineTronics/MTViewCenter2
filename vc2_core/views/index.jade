@@ -10,7 +10,7 @@ html
     body
         #main-container(ng-controller="mtTabCtrl as mtTabs", ng-class="{'container': !mtTabs.setFullscreen, 'container-fluid': mtTabs.setFullscreen}").container
             div.welcome-screen(hide-after-bootstrap then-show=".mt-tabs")
-                img(src="static/img/mt/MineTronicsLogo1024.jpg").mt-logo
+                img.mt-logo.center-block(src="static/img/mt/MineTronicsLogo1024.jpg")
                 div.jumbotron
                     h3(translate="APP_LOADING")
                     h3

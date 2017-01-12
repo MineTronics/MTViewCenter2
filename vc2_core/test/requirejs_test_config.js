@@ -13,6 +13,9 @@ console.log('\nChanging requirejs config - see vc2_core/test/requirejs_test_conf
     + 'Adding path and shim for angular-mock');
 require.config({
     paths: {
+        'vc2_core': '../../../vc2_core',
+        'plugins_open_source': '../../../plugins_open_source',
+        'plugins_proprietary': '../../../plugins_proprietary',
         'angular-mocks': '../../../bower_components/angular-mocks/angular-mocks'
     },
     shim: {

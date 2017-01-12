@@ -29,6 +29,7 @@
         "requirejs": "~2.1.14",
         "angular": "1.5.5",
         "angular-bootstrap": "0.13.1",
+        "angular-mocks": "1.5.5",
         "underscore": "~1.6.0",
         "bootstrap": "3.3.5",
         "jquery": "1.11.3",

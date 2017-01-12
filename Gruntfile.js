@@ -311,9 +311,9 @@ module.exports = function (grunt) {
          */
         jasmine: {
             core_tasks: {
-                src: 'vc2_core/tasks/*.js',
+                src: VC_CORE_PATH + '/tasks/*.js',
                 options: {
-                    specs: 'vc2_core/test/spec/*Spec.js',
+                    specs: VC_CORE_PATH + '/test/spec/*Spec.js',
                     template: require('grunt-template-jasmine-requirejs')
                 }
             },
@@ -325,10 +325,17 @@ module.exports = function (grunt) {
                 }
             },
             browser_static: {
-                //Monkey patch
-                src: 'vc2_core/test/requirejs_test_config.js',
                 options: {
-                    specs: ['plugins_*/*/test/**/*-spec.js', 'vc2_core/*/test/**/*-spec.js'],
+                    helpers: [
+                        //Adds special paths and shim for testing environment
+                        VC_CORE_PATH + '/test/requirejs_test_config.js',
+
+                        //Jasmine plugin for testing AJAX
+                        'node_modules/jasmine-ajax/lib/mock-ajax.js'
+                    ],
+                    specs: [
+                        VC_CORE_PATH + '/*/test/**/*-spec.js'
+                    ].concat(mtUtil.getPluginsPathFor(buildConfig.pluginsDirs, '/*/test/**/*-spec.js')),
                     template: require('grunt-template-jasmine-requirejs'),
                     templateOptions: {
                         requireConfig: '<%= requirejs.options %>'
@@ -382,7 +389,8 @@ module.exports = function (grunt) {
                         'Float32Array',
                         'Uint16Array',
                         'DataView',
-                        'Blob'
+                        'Blob',
+                        'XMLSerializer'
                     ]
                 },
                 options: {

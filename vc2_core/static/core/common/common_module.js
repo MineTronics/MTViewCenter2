@@ -6,8 +6,11 @@ define([
     'core/common/mtColorPicker/mtColorHelper',
     'core/common/mtColorPicker/mtColorPicker',
     'core/common/mtFileRead',
-    'core/common/localMoment'
-], function (angular, $, $ui, mtDatatableModule, mtColorHelper, mtColorPicker, mtFileRead, localMoment) {
+    'core/common/localMoment',
+    'core/common/convertToNumber',
+    'core/common/exportToFile',
+    'core/common/debounce'
+], function (angular, $, $ui, mtDatatableModule, mtColorHelper, mtColorPicker, mtFileRead, localMoment, convertToNumber, exportToFile, debounce) {
     'use strict';
 
     function compile($compile) {
@@ -120,7 +123,10 @@ define([
         .directive('mtColorPicker', mtColorPicker)
         .factory('mtUtil', mtUtil)
         .directive('mtFileRead', mtFileRead)
-        .constant('localMoment', localMoment);
+        .constant('localMoment', localMoment)
+        .directive('convertToNumber', convertToNumber)
+        .constant('exportToFile', exportToFile)
+        .constant('debounce', debounce);
 
     return 'mt.common';
 });

@@ -12,7 +12,7 @@ then
 fi
 
 # install the nodejs package from nodesource.com
-sudo curl -sL https://deb.nodesource.com/setup_5.x | sh -
+sudo curl -sL https://deb.nodesource.com/setup_7.x | sh -
 sudo apt-get install --yes nodejs
 
 # install envoronment web package manager and taskrunner as Globals

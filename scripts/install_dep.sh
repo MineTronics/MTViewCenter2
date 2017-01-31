@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ $# -eq 0 ]
 then
-    echo "No arguments supplied. You need to pass path to config file as firts argument like vc2_core/default_config.js"
+    echo "No arguments supplied. You need to pass path to config file as first argument like vc2_core/default_config.js"
 else
     node scripts/make_combined_deps.js $1 --file bower.json
     echo "Running bower install"

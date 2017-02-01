@@ -16,7 +16,7 @@ sudo curl -sL https://deb.nodesource.com/setup_7.x | sh -
 sudo apt-get install --yes nodejs
 
 # install envoronment web package manager and taskrunner as Globals
-sudo npm install -g grunt-cli mocha bower
+sudo npm install -g grunt-cli bower
 
 if [ $? -gt 0 ]
 then

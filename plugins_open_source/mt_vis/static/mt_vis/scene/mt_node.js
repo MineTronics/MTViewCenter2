@@ -38,7 +38,7 @@ define(['scenejs'], function (SceneJS) {
                         type: 'geometry',
                         primitive: 'points',
                         positions: new Float32Array([
-                            params.x, params.y, params.z
+                            0, 0, 0  // params.x, params.y, params.z
                         ]),
                         indices: new Uint16Array([
                             0

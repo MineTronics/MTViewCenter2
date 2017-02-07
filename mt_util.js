@@ -316,13 +316,31 @@ function loadPlugins(grunt, pluginsNames, pluginsDirs, configPath, defaultConfig
 }
 
 /**
- * Returns paths for plugins components. 
- * @param {string[]} pluginsDirs - Array of directories paths where to look for 
+ * Returns paths for plugins components.
+ * @param {string[]} pluginsDirs - Array of directories paths where to look for
  * plugins
  * @param {string} pathType - Plugin's component path
  * @returns {string[]} List of paths to the plugin's components
  */
-function getPluginsPathFor(pluginsDirs, pathType) {
+function getPluginsPathFor(pluginsDirs, pathType, pluginsList, grunt) {
+    if (pluginsList && pluginsList.length) {
+        var result = [];
+
+        pluginsDirs.forEach(function (pluginDir) {
+            pluginsList.forEach(function (pluginName) {
+                result.push(pluginDir + '/' + pluginName);
+            });
+        });
+
+        result = result.filter(function (path) {
+            return grunt.file.exists(path);
+        }).map(function (path) {
+            return path + pathType;
+        });
+
+        return result;
+    }
+
     return pluginsDirs.map(function (path) {
         return path + pathType;
     });

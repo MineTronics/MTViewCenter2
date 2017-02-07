@@ -335,7 +335,7 @@ module.exports = function (grunt) {
                     ],
                     specs: [
                         VC_CORE_PATH + '/*/test/**/*-spec.js'
-                    ].concat(mtUtil.getPluginsPathFor(buildConfig.pluginsDirs, '/*/test/**/*-spec.js')),
+                    ].concat(mtUtil.getPluginsPathFor(buildConfig.pluginsDirs, '/test/**/*-spec.js', buildConfig.loadPlugins, grunt)),
                     template: require('grunt-template-jasmine-requirejs'),
                     templateOptions: {
                         requireConfig: '<%= requirejs.options %>'

@@ -9,8 +9,9 @@ define([
     'core/common/localMoment',
     'core/common/convertToNumber',
     'core/common/exportToFile',
-    'core/common/debounce'
-], function (angular, $, $ui, mtDatatableModule, mtColorHelper, mtColorPicker, mtFileRead, localMoment, convertToNumber, exportToFile, debounce) {
+    'core/common/debounce',
+    'core/common/mt_pubsub'
+], function (angular, $, $ui, mtDatatableModule, mtColorHelper, mtColorPicker, mtFileRead, localMoment, convertToNumber, exportToFile, debounce, mt_pubsub) {
     'use strict';
 
     function compile($compile) {
@@ -126,7 +127,8 @@ define([
         .constant('localMoment', localMoment)
         .directive('convertToNumber', convertToNumber)
         .constant('exportToFile', exportToFile)
-        .constant('debounce', debounce);
+        .constant('debounce', debounce)
+        .value('mt_pubsub', mt_pubsub);
 
     return 'mt.common';
 });
